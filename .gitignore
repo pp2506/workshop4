@@ -1,18 +1,63 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+#include "stdio.h"
+#include "math.h"
+prime(int n)
+void printMinMaxDigits(int n)
+{
+	do{
+		printf("===========MENU===========");
+		printf("\n1 - Nhap n");
+		printf("\n2 - Min: , Max: ");
+		printf("\n3 - Quit");
+		printf("\nSelect an operation: ");
+		scanf("%d%*c", &choice);
+		switch(choice);
+		{
+			case 1: do{
+				int n;
+				printf("\nNhap n= ");
+				scanf("%d", &n);}
+				while (n<0);
+				if (prime(n)==1)
+				printf("\nit is a prime");
+				else printf("\nit is not a prime");
+				break;
+			case 2: do{
+				int n;
+				printf("\nNhap n= ");
+				scanf("%d", &n);
+				int max, min;
+				max=n%10;
+				min=n%10};
+				while (n>0);
+				 {
+		int temp = n % 10;
+		       n/=10;
+		if ( max < temp)
+		{
+			 max = temp;
+		}
+		if ( min > temp)
+		{
+			 min = temp;
+		}
+     }
+     printf("\nMinimum of digits: %d\n", min);
+     printf("Maximum of digits: %d\n", max);	
+		}
+	}
+}
+int main()
+{   int userChoice;
+    do
+    {   userChoice = getUserChoice();
+        switch(userChoice)
+		{   case 1: primes();
+		            break;
+		    case 2: digits();
+			        break; 
+		    default: printf("\nGood Bye!");
+	    }
+	}
+	while (userChoice>0 && userChoice<3);
+	return 0;
+}
